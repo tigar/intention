@@ -1,8 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { createStackNavigator, createAppContainer } from "react-navigation";
-import navStyles from './styles/navStyles';
+
+import { ApolloProvider } from "react-apollo";
+import { HttpLink } from "apollo-link-http";
+import { InMemoryCache } from "apollo-cache-inmemory";
+
+import navStyles from "./styles/navStyles";
 import Friend from './Friend';
+
 
 
 // export default class App extends React.Component {
